@@ -9,4 +9,4 @@ Shell.exec (`http-server ./dist -p ${PORT}`);
 console.log (`Serving On: http://localhost:${PORT}/`);
 
 
-module.exports.Port = Port;
+module.exports.PORT = PORT;
