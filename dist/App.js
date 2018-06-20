@@ -1,8 +1,6 @@
-const Server = require ("./Server.js");
 const {app, BrowserWindow} = require ("electron");
 
-
-const URL = `http://localhost:${Server.PORT}/`;
+const URL = `http://localhost:7373/`;
 
 app.on ("ready", () => {
 
