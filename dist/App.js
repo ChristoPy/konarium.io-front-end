@@ -4,6 +4,10 @@ const URL = `http://localhost:7373/`;
 
 app.on ("ready", () => {
 
-	const Window = new BrowserWindow ();
+	const Window = new BrowserWindow ({
+		webPreferences: {
+			nodeIntegration: false
+		}
+	});
 	Window.loadURL (URL);
 });
