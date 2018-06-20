@@ -1,12 +1,23 @@
 const Shell = require ("shelljs");
+Shell.config.execPath = Shell.which ("node");
 
 const PORT = 7373;
 
 
-Shell.exec (`http-server ./dist -p ${PORT}`);
+const Start = () => {
 
+	try {
 
-console.log (`Serving On: http://localhost:${PORT}/`);
+		Shell.exec (`http-server ./dist -p ${PORT}`);
+	} catch (SomeError) {
 
+		console.log (SomeError);
+		process.exit (0);
+	}
+
+	console.log (`Serving On: http://localhost:${PORT}/`);
+}
+
+Start ();
 
 module.exports.PORT = PORT;
