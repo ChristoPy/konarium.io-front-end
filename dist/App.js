@@ -1,15 +1,16 @@
 const {app, BrowserWindow} = require ("electron");
-const Port = require ("./Server.js");
+const {PORT} = require ("./Server.js");
 
 
-const URL = `http://localhost:${Port}/`;
+const URL = `http://localhost:${PORT}/`;
 
 app.on ("ready", () => {
 
-	const Window = new BrowserWindow ({
+	let Window = new BrowserWindow ({
 		webPreferences: {
 			nodeIntegration: false
-		}
+		},
+		backgroundColor: "#e5e5e5"
 	});
 
 	Window.loadURL (URL);
