@@ -6,10 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "electron dist/App.js",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "electron": "^2.0.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
