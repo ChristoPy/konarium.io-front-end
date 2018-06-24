@@ -1,10 +1,12 @@
 const {app, BrowserWindow} = require ("electron");
-const {PORT, Stop} = require ("./Server.js");
+const {Start, Stop, PORT} = require ("./Server.js");
 
 
 const URL = `http://localhost:${PORT}/`;
 
 app.on ("ready", () => {
+
+	Start ();
 
 	let Window = new BrowserWindow ({
 		webPreferences: {
